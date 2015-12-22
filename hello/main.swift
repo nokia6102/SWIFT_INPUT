@@ -8,5 +8,14 @@
 
 import Foundation
 
-println("Hello, World!")
 
+func input() -> String {
+  var keyboard = NSFileHandle.fileHandleWithStandardInput()
+  var inputData = keyboard.availableData
+  return NSString(data: inputData, encoding:NSUTF8StringEncoding)!
+}
+
+var inputStr : String;
+print("Input:");
+inputStr = input();
+println("You type:" + inputStr);
